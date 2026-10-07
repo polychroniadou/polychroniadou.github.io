@@ -8,7 +8,7 @@ I am a Master's student at the University of the Aegean, studying "Geography and
 - **GIS: QGIS, ArcGis-pro** 
 - **Remote sensing** 
 - **Programming: Python, R** 
-- **UAV: LiDAR, Multispectral, Thermal, 3D (Agisoft MEtashape, Cloud Compare)** 
+- **UAV: LiDAR, Multispectral, Thermal, 3D (Agisoft Metashape, Cloud Compare)** 
 
 ## Projects
 
