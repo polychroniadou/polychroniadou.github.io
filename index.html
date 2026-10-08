@@ -80,11 +80,30 @@
     .tile:hover .tile-title { opacity: 0; }
     .tile:hover img { transform: scale(1.05); }
     /* Phones have no hover: always show the description at the bottom */
-    @media (hover: none) {
-      .tile-info { opacity: 1; background: linear-gradient(transparent 30%, rgba(20, 28, 36, 0.92)); justify-content: flex-end; }
-      .tile-title { display: none; }
-      .tile-info p { font-size: 0.9rem; }
-    }
+   @media (hover: none) {
+  .tile-info { 
+    opacity: 1; 
+    background: linear-gradient(transparent 15%, rgba(20, 28, 36, 0.95)); 
+    justify-content: flex-end; 
+    padding: 16px;
+  }
+  .tile-title { display: none; }
+  .tile-info h3 { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.05rem; 
+    margin: 0 0 6px; 
+    color: white; 
+  }
+  .tile-info p { 
+    font-size: 0.85rem; 
+    margin: 0 0 10px; 
+  }
+}
+
+/* Hide the desktop duplicate of the h3 title on desktop so it doesn't double up on hover */
+@media (hover: hover) {
+  .tile-info h3 { display: none; }
+}
 
     *, *::before, *::after {
   box-sizing: border-box;
@@ -181,6 +200,7 @@
         <img src="Cairo_urban_class15-25copy.png" alt="Urban expansion map of Cairo, 2015 to 2025">
         <div class="tile-title">Cairo Urban Expansion 2015-2025</div>
         <div class="tile-info">
+          <h3>Cairo Urban Expansion 2015-2025</h3>
           <p>A CNN classification of urban expansion of Cairo</p>
           <span>View on GitHub →</span>
         </div>
