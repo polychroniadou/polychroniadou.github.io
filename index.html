@@ -68,10 +68,18 @@
       .tile-title { display: none; }
       .tile-info p { font-size: 0.9rem; }
     }
-    #contact {
-  background: #24303c /* Change to your preferred hex code */
-  border-radius: 12px;
-  margin: 40px auto;   /* Keeps it centered with spacing above/below */
+   /* Full-width container with new background */
+#contact {
+  max-width: 100%;
+  background: #1e242c; /* Change to your preferred hex code */
+  padding: 60px 0;
+}
+
+/* Keeps the text aligned inside the 900px column */
+#contact .contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
   </style>
 </head>
@@ -114,7 +122,7 @@
     <h2>Projects</h2>
     <div class="projects-grid">
 
-      <!-- Tile 1: Cairo -->
+      <!--  Cairo  ------------------------------------------------- -->
       <a class="tile" href="https://github.com/polychroniadou/Cairo-Egypt-Urban-Expansion-2015---2025">
         <img src="Cairo_urban_class15-25copy.png" alt="Urban expansion map of Cairo, 2015 to 2025">
         <div class="tile-title">Cairo Urban Expansion 2015-2025</div>
@@ -147,14 +155,15 @@
     </div>
   </section>
 
-  <!-- RESUME -->
-  <section id="contact">
+  <!-- CONTACT ---------------------------------------------------------------------- -->
+<section id="contact">
+  <div class="contact-container">
     <h2>Contact</h2>
-    <!-- Link to the PDF in this repo (%20 replaces the space in the name) -->
-    <p> Thessaloniki, Greece, GMT +2 </p>
-      <p>Email: <a href="mailto:polychroniadou@icloud.com">polychroniadou@icloud.com</a></p>
+    <p>Thessaloniki, Greece, GMT +2</p>
+    <p>Email: <a href="mailto:polychroniadou@icloud.com">polychroniadou@icloud.com</a></p>
     <a href="Maria_Polychroniadou_CV.docx.pdf">CV</a>
-  </section>
+  </div>
+</section>
 
 </body>
 </html>
