@@ -24,13 +24,15 @@
     /* Button colour change when hovering */
     nav a:hover { background: white; color: #344454; }
     /* Grey transparent intro box, centred under the menu */
-    .intro { max-width: 1050px; margin: 0 auto; background: rgba(30, 36, 44, 0.85); padding: 60px 24px; }
+    .intro { max-width: 1050px; margin: 0 auto; background: rgba(30, 36, 44, 0.85); padding: 40px 32px; 
+  border-radius: 12px; /* matches #contact */
+  box-sizing: border-box; }
     /* Your name */
     .intro h1 { font-family: 'Montserrat', sans-serif; font-size: 2.4rem; margin: 0 0 12px; text-align: center; }
     /* Intro text */
     .intro p { margin: 0; font-size: 1.1rem; line-height: 1.5; }
     /* Centred content column for the sections */
-    section { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+    section { max-width: 1050px; margin: 0 auto; padding:48px 24px; box-sizing: border-box; }
     /* Section headings */
     h2 { font-family: 'Montserrat', sans-serif; }
     /* White project cards */
@@ -40,9 +42,14 @@
     /* Link colour inside sections and cards */
     a { color: #7fd1d8; }
     .card a { color: #1f6f78; }
+   
     /* Phone layout: smaller margins on the intro box */
+  
     @media (max-width: 700px) {
-      .intro { margin: 0 16px; }
+      .intro { margin: 0 16px; padding: 24px 20px; }
+      .intro div[style*="height:520px"] {
+        height: 380px !important;
+      }
     }
         /* Grid of project tiles */
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
@@ -73,8 +80,10 @@
   background: rgba(30, 36, 44, 0.85);
   border-radius: 12px;
   margin: 40px auto 80px auto;
+  padding: 40px 32px;
 }
-    #contact a[href$=".pdf"] {
+   /* 3. CV Button refinement */
+#contact a[href$=".pdf"] {
   display: inline-block;
   margin-top: 14px;
   font-family: 'Montserrat', sans-serif;
@@ -83,14 +92,15 @@
   background: transparent;
   border: 1px solid white;
   border-radius: 30px;
-  padding: 10px 24px;
+  padding: 10px 26px;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 #contact a[href$=".pdf"]:hover {
   background: white;
-  color: #344454;
+  color: #1e242c;
+  transform: translateY(-2px);
 }
   </style>
 </head>
