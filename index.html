@@ -75,34 +75,6 @@
     </div>
   </div>
 
-
-  
-    /* Grid of project tiles, 3 per row on desktop */
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    /* One tile: the whole tile is a link */
-    .tile { position: relative; display: block; overflow: hidden; border-radius: 12px; aspect-ratio: 4 / 3; color: white; text-decoration: none; }
-    /* Image fills the tile */
-    .tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
-    /* Title on the image, at the bottom */
-    .tile-title { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 14px; font-family: 'Montserrat', sans-serif; font-weight: 700; background: linear-gradient(transparent, rgba(0, 0, 0, 0.75)); transition: opacity 0.3s; }
-    /* Hover layer: description + link, hidden until hover */
-    .tile-info { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 20px; background: rgba(20, 28, 36, 0.88); opacity: 0; transition: opacity 0.3s; }
-    /* Description text */
-    .tile-info p { margin: 0 0 14px; font-size: 1rem; line-height: 1.4; }
-    /* Link text */
-    .tile-info span { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #7fd1d8; }
-    /* On hover: show the info layer, hide the title, zoom the image slightly */
-    .tile:hover .tile-info { opacity: 1; }
-    .tile:hover .tile-title { opacity: 0; }
-    .tile:hover img { transform: scale(1.05); }
-    /* Phones and tablets have no hover: show the info layer on a lighter overlay at the bottom */
-    @media (hover: none) {
-      .tile-info { opacity: 1; background: linear-gradient(transparent 30%, rgba(20, 28, 36, 0.92)); justify-content: flex-end; }
-      .tile-title { display: none; }
-      .tile-info p { font-size: 0.9rem; }
-    }
-
-
   
    <!-- PROJECTS -->
   <section id="projects">
@@ -112,7 +84,7 @@
       <!-- Copy this whole tile for each project -->
       <a class="tile" href="https://github.com/polychroniadou/Cairo-Egypt-Urban-Expansion-2015---2025">
         <!-- Image must be uploaded to this repo; name must match exactly -->
-        <img src="cairo_urban_expansion.jpg" alt="Urban expansion map of Cairo, 2015 to 2025">
+        <img src="cairo_urban_class15-25copy.png">
         <!-- Title shown on the image -->
         <div class="tile-title">Cairo Urban Expansion 2015-2025</div>
         <!-- Shown on hover -->
