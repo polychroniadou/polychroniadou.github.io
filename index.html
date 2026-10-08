@@ -41,6 +41,30 @@
     @media (max-width: 700px) {
       .intro { margin: 0 16px; }
     }
+        /* Grid of project tiles */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    /* One tile: the whole tile is a link */
+    .tile { position: relative; display: block; overflow: hidden; border-radius: 12px; aspect-ratio: 4 / 3; color: white; text-decoration: none; }
+    /* Image fills the tile */
+    .tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    /* Title on the image, at the bottom */
+    .tile-title { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 14px; font-family: 'Montserrat', sans-serif; font-weight: 700; background: linear-gradient(transparent, rgba(0, 0, 0, 0.75)); transition: opacity 0.3s; }
+    /* Hover layer: description + link, hidden until hover */
+    .tile-info { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 20px; background: rgba(20, 28, 36, 0.88); opacity: 0; transition: opacity 0.3s; }
+    /* Description text */
+    .tile-info p { margin: 0 0 14px; font-size: 1rem; line-height: 1.4; }
+    /* Link text */
+    .tile-info span { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #7fd1d8; }
+    /* On hover: show the info layer, hide the title, zoom the image slightly */
+    .tile:hover .tile-info { opacity: 1; }
+    .tile:hover .tile-title { opacity: 0; }
+    .tile:hover img { transform: scale(1.05); }
+    /* Phones have no hover: always show the description at the bottom */
+    @media (hover: none) {
+      .tile-info { opacity: 1; background: linear-gradient(transparent 30%, rgba(20, 28, 36, 0.92)); justify-content: flex-end; }
+      .tile-title { display: none; }
+      .tile-info p { font-size: 0.9rem; }
+    }
   </style>
 </head>
 <body>
@@ -77,23 +101,22 @@
 
   
    <!-- PROJECTS -->
+  <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
 
-      <!-- Copy this whole tile for each project -->
+      <!-- Tile 1: Cairo -->
       <a class="tile" href="https://github.com/polychroniadou/Cairo-Egypt-Urban-Expansion-2015---2025">
-        <!-- Image must be uploaded to this repo; name must match exactly -->
-        <img src="Cairo_urban_class15-25copy.png">
-        <!-- Title shown on the image -->
+        <img src="cairo_urban_class15-25copy.jpg" alt="Urban expansion map of Cairo, 2015 to 2025">
         <div class="tile-title">Cairo Urban Expansion 2015-2025</div>
-        <!-- Shown on hover -->
         <div class="tile-info">
-          <p>A CNN binary classification on Matlab</p>
+          <p>WRITE 1-2 SENTENCES</p>
           <span>View on GitHub →</span>
         </div>
       </a>
 
+      <!-- Tile 2: Lesvos Geopark -->
       <a class="tile" href="https://github.com/polychroniadou/Lesvos-Geopark">
         <img src="lesvos_geopark.jpg" alt="Orthomap of Plaka Park, Lesvos">
         <div class="tile-title">Lesvos Geopark</div>
@@ -103,6 +126,7 @@
         </div>
       </a>
 
+      <!-- Tile 3: Fire Risk Map -->
       <a class="tile" href="https://github.com/polychroniadou/Fire-Risk-Map">
         <img src="fire_risk_map.jpg" alt="Fire risk zone map of Lesvos">
         <div class="tile-title">Fire Risk Map, Lesvos</div>
