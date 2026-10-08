@@ -55,22 +55,27 @@
     <a href="#resume">Resume</a>
   </nav>
 
-  <!-- Grey intro box, after the menu -->
-   <!-- Grey intro box: text on the left, photo on the right -->
-  <div class="intro" style="display:flex; gap:24px; align-items:center; flex-wrap:wrap;">
+    <!-- Grey intro box: text on the left, overlapping photos on the right -->
+  <div class="intro" style="display:flex; gap:32px; align-items:center; flex-wrap:wrap;">
     <!-- Text column -->
     <div style="flex:1; min-width:260px;">
       <!-- Your name -->
-    
-      <!-- Intro text: paste your new, shorter version here -->
-      <p> My name is Maria Polychroniadou, I am a Master’s student at University of the Aegean studying ‘Geography and Applied Geoinformatics’ and I am currently working on my thesis focusing on automated detection of damage and corrosion at heritage sites using CNNs and remote sensing applications. 
+      <h1 style="text-align:left;">Maria Polychroniadou</h1>
+      <!-- Intro text: paste your shorter version here -->
+     <p> My name is Maria Polychroniadou, I am a Master’s student at University of the Aegean studying ‘Geography and Applied Geoinformatics’ and I am currently working on my thesis focusing on automated detection of damage and corrosion at heritage sites using CNNs and remote sensing applications. 
     I have an extended background in the field of culture, with a BA in Heritage Management and fieldwork and research experience in archaeological sites
 </p>
     </div>
-    <!-- Photo column -->
-    <img src="about me.jpg"  style="flex:1; min-width:260px; max-width:100%; border-radius:8px;">
+    <!-- Photo collage column -->
+    <div style="position:relative; width:100%; max-width:340px; height:390px; margin:0 auto;">
+      <!-- Fieldwork photo, top left, purple border like in Canva -->
+      <img src="fieldwork.jpg"  style="position:absolute; top:0; left:0; width:48%; border:2px solid #8b5cf6; z-index:2;">
+      <!-- Drone photo, lower right, sits behind the first one -->
+      <img src="drone.jpg"  style="position:absolute; top:60px; right:0; width:62%;">
+      <!-- Caption under the photos -->
+      <p style="position:absolute; bottom:0; right:0; margin:0; font-size:0.8rem; font-style:italic; text-align:right;">Heritage Management,<br>UAV pilot, GIS, Remote Sensing</p>
+    </div>
   </div>
-
   
   <!-- PROJECTS -->
   <section id="projects">
