@@ -5,33 +5,88 @@
   <title>Maria | GIS Portfolio</title>
   <!-- Makes the page fit phone screens -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Loads the Montserrat font for headings and buttons -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    /* Background colour and font for the whole page */
-    body { background: #e8f1f2; font-family: Arial, sans-serif; margin: 0; color: #1b2a2f; }
-    /* Centred content column */
-    .wrap { max-width: 800px; margin: 0 auto; padding: 24px; }
-    /* Coloured header block */
-    header { background: #1f6f78; color: white; padding: 40px 24px; text-align: center; }
-    /* White cards for each project */
-    .card { background: white; border-radius: 12px; padding: 16px; margin: 16px 0; }
+    /* Smooth scrolling when a menu button is clicked */
+    html { scroll-behavior: smooth; }
+    /* Dark slate background, light text, page font */
+    body { background: #344454; color: #e9edf1; font-family: Georgia, serif; margin: 0; }
+    /* Hero area that holds the image and the text box */
+    .hero { position: relative; max-width: 1100px; margin: 40px auto 0; padding: 0 24px; }
+    /* Big image on the right side */
+    .hero img { display: block; width: 65%; margin-left: auto; }
+    /* Dark transparent text box overlapping the image */
+    .intro { position: absolute; left: 24px; top: 50%; transform: translateY(-50%); width: 50%; background: rgba(30, 36, 44, 0.85); padding: 28px; }
+    /* Your name */
+    .intro h1 { font-family: 'Montserrat', sans-serif; font-size: 2.6rem; margin: 0 0 12px; text-align: center; }
+    /* Intro text */
+    .intro p { margin: 0; font-size: 1.1rem; line-height: 1.4; }
+    /* Menu row below the image */
+    nav { display: flex; justify-content: center; gap: 16px; margin: 32px 0; }
+    /* Menu buttons with an outline */
+    nav a { font-family: 'Montserrat', sans-serif; font-weight: 700; color: white; text-decoration: none; border: 1px solid white; border-radius: 30px; padding: 12px 28px; }
+    /* Button colour change when hovering */
+    nav a:hover { background: white; color: #344454; }
+    /* Centred content column for the sections */
+    section { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+    /* Section headings */
+    h2 { font-family: 'Montserrat', sans-serif; }
+    /* White project cards */
+    .card { background: white; color: #1b2a2f; border-radius: 12px; padding: 20px; margin: 20px 0; }
     /* Images never wider than their card */
-    img { max-width: 100%; border-radius: 8px; }
+    .card img { max-width: 100%; border-radius: 8px; }
+    /* Link colour inside cards and sections */
+    a { color: #7fd1d8; }
+    .card a { color: #1f6f78; }
+    /* Phone layout: stack the text box under the image */
+    @media (max-width: 700px) {
+      .hero img { width: 100%; }
+      .intro { position: static; transform: none; width: auto; margin-top: -40px; }
+      nav { flex-wrap: wrap; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <!-- Your name and one-line title -->
-    <h1>WRITE YOUR NAME</h1>
-    <p>WRITE YOUR ONE-LINE TITLE</p>
-  </header>
-  <div class="wrap">
-    <!-- Copy this card block once per project -->
+
+  <!-- HOME: image + text box -->
+  <div class="hero" id="home">
+    <!-- Change the file name to your hero image (must be in this repo) -->
+    <img src="Portfolio.jpg" alt="WRITE A SHORT DESCRIPTION OF THE IMAGE">
+    <div class="intro">
+      <!-- Your name -->
+      <h1>WRITE YOUR NAME</h1>
+      <!-- 2-3 sentences about you, in your own words -->
+      <p>WRITE YOUR INTRO HERE</p>
+    </div>
+  </div>
+
+  <!-- Menu below the image -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+  </nav>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <!-- Copy this whole card block for each project -->
     <div class="card">
-      <h2>PROJECT NAME</h2>
-      <img src="Portfolio.jpg">
+      <h3>PROJECT NAME</h3>
+      <!-- Image must be uploaded to this repo, name must match exactly -->
+      <img src="Portfolio%20Presentation.jpg" alt="WRITE A SHORT DESCRIPTION">
       <p>WRITE 1-2 SENTENCES</p>
       <a href="https://github.com/polychroniadou/Lesvos-Geopark">View on GitHub</a>
     </div>
-  </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <!-- Link to the PDF in this repo (%20 replaces the space in the name) -->
+    <a href="Portfolio%20Maria.pdf">Download my resume (PDF)</a>
+  </section>
+
 </body>
 </html>
