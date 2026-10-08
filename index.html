@@ -45,11 +45,21 @@
    
     /* Phone layout: smaller margins on the intro box */
   
-    @media (max-width: 700px) {
-      .intro { margin: 0 16px; padding: 24px 20px; }
-      .intro div[style*="height:520px"] {
-        height: 380px !important;
-      }
+   @media (max-width: 700px) {
+  /* Give all three cards the exact same side margins on phones */
+  .intro,
+  #projects,
+  #contact {
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    padding: 24px 20px !important;
+  }
+
+  /* Responsive height reduction for the intro photo collage */
+  .intro div[style*="height:520px"] {
+    height: 380px !important;
+  }
+}
     }
         /* Grid of project tiles */
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
