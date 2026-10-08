@@ -75,14 +75,20 @@
       .tile-title { display: none; }
       .tile-info p { font-size: 0.9rem; }
     }
+
+    *, *::before, *::after {
+  box-sizing: border-box;
+}
    /* Full-width container with new background */
 #contact {
+  max-width: 1050px;
   background: rgba(30, 36, 44, 0.85);
   border-radius: 12px;
   margin: 40px auto 80px auto;
   padding: 40px 32px;
+  box-sizing: border-box; /* This was missing */
 }
-   /* 3. CV Button refinement */
+   /*  CV Button refinement */
 #contact a[href$=".pdf"] {
   display: inline-block;
   margin-top: 14px;
@@ -104,7 +110,7 @@
 }
 /*------------------------------------------------------------Project*/
     #projects {
-  max-width: 1000px;
+  max-width: 1050px;
   margin: 40px auto;
   background: #1e2d33;               /* Deep muted teal-charcoal */
   border: 1px solid rgba(127, 209, 216, 0.2); /* Soft teal hairline border */
