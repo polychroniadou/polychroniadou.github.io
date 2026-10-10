@@ -278,13 +278,24 @@
     
     
     <!-- Photo collage column, bigger than before -->
-    div class="intro-photos-grid">
-    <div class="intro-photo-card">
-      <img src="fieldwork2.jpg" alt="Archaeological conservation fieldwork">
+    <!-- Controlled Photo Grid -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 24px; max-width: 680px; margin-left: auto; margin-right: auto;">
     
+    <!-- Photo 1: Archaeology -->
+    <div style="position: relative; border-radius: 10px; overflow: hidden; height: 260px; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+      <img src="fieldwork2.jpg" alt="Archaeological conservation fieldwork" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      
+      </div>
     </div>
-    <div class="intro-photo-card">
-      <img src="drone.jpg" alt="UAV remote sensing operations">
+
+    <!-- Photo 2: Drone -->
+    <div style="position: relative; border-radius: 10px; overflow: hidden; height: 260px; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+      <img src="drone.jpg" alt="UAV remote sensing operations" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+     
+      </div>
+    </div>
+
+  </div>
      
     </div>
 </div>
