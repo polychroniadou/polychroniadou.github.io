@@ -13,13 +13,13 @@ I am a Master's student at the University of the Aegean, studying "Geography and
 ## Projects
 
 <!-- One line each: what it is + the main method or tool -->
-- [Lesvos Geopark](https://github.com/polychroniadou/Lesvos-Geopark): WRITE ONE LINE
-- [Fire Risk Map](https://github.com/polychroniadou/Fire-Risk-Map): WRITE ONE LINE
-- [REPO NAME](https://github.com/polychroniadou/REPO-NAME): WRITE ONE LINE
+- [Lesvos Geopark](https://github.com/polychroniadou/Lesvos-Geopark)
+- [Fire Risk Map](https://github.com/polychroniadou/Fire-Risk-Map)
+
 
 ## Resume
 
-[Download my resume (PDF)](Maria_Resume.pdf)
+[Download my resume (PDF)](Maria_Polychroniadou_CV.pdf)
 
 ## Contact
 - Email: polychroniadou@icloud.com 
