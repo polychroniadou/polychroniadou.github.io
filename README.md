@@ -19,7 +19,7 @@ I am a Master's student at the University of the Aegean, studying "Geography and
 
 ## Resume
 
-[Download my resume (PDF)](Maria_Polychroniadou_CV.pdf)
+[View my resume (PDF)](Maria_Polychroniadou_CV.pdf)
 
 ## Contact
 - Email: polychroniadou@icloud.com 
